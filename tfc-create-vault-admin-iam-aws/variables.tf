@@ -9,3 +9,9 @@ variable "inline_po_name" {
     type = string
     default = "vault-admin-policy"
 }
+
+variable "aws_region" {
+    description = "AWS Region"
+    type = string
+    default = "ap-northeast-1"
+}
