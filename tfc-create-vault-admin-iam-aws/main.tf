@@ -42,7 +42,7 @@ data "aws_iam_policy_document" "inline_po_vault" {
         "iam:RemoveUserFromGroup"
         ]
     resources = [
-		"arn:aws:iam::339713018668:user/vault-*"
+		"arn:aws:iam::533267411943:user/vault-*"
         ]
   }
 }
