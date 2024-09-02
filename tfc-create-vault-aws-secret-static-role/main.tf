@@ -42,3 +42,11 @@ resource "aws_iam_user_policy" "inline_po_attach" {
 #   username = var.user_list[count.index]
 #   rotation_period = var.rotation_period
 # }
+
+resource "vault_aws_secret_backend_static_role" "static_role" {
+  count = length(var.user_list)
+  backend = var.backend_path
+  name = var.user_list[count.index]
+  username = var.user_list[count.index]
+  rotation_period = var.rotation_period
+}
