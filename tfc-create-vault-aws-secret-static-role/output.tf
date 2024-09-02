@@ -21,6 +21,6 @@ output "creds_vault_static_user_accesskey" {
 
 output "creds_vault_static_user_secret_accesskey" {
   description = "Credential of Static Users Secret Key"
-  value = data.vault_aws_static_access_credentials.creds.secret_key
+  value = data.vault_aws_static_access_credentials.creds[*].secret_key
   sensitive = true
 }
