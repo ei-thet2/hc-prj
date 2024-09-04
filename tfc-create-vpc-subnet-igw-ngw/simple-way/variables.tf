@@ -148,3 +148,20 @@ variable "nat_gateway_destination_cidr_block" {
   default     = "0.0.0.0/0"
 }
 
+# Vault Read Secret
+variable "backend_path" {
+    description = "Vault AWS Secret Path"
+    type = string
+    default = "aws-master-account"
+}
+
+variable "backend_role" {
+    description = "Vault AWS Secret Role"
+    type = string
+    default = "master-iamadmin-role"
+}
+
+variable "aws_region" {
+    description = "AWS Region for Vault AWS Secret Role"
+    default = "ap-southeast-1"
+}
