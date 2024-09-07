@@ -7,7 +7,7 @@ variable "hvn_id" {
 variable "hvn_to_vpc" {
   description = "The ID of the network peering."
   type = string
-  default = "hvn_to_vpc_peering"
+  default = "hvn-to-vpc-peering"
 }
 
 variable "vpc_id" {
