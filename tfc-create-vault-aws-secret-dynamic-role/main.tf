@@ -32,6 +32,11 @@ resource "vault_aws_secret_backend_role" "dynamic_role" {
         "Effect": "Allow",
         "Action": "ec2:*",
         "Resource": "*"
+      },
+      {
+        "Effect": "Allow",
+        "Action": "rds:*",
+        "Resource": "*"
       }
     ]
   }
