@@ -39,3 +39,15 @@ variable "tfc_workspace_name" {
   default     = "*"
   description = "The name of the workspace that you'd like to create and connect to Vault"
 }
+
+variable "aws-secret-role" {
+  type        = string
+  default     = "aws-secret-role"
+  description = "This role is to test to create KV Secret with this jwt secret backend with tfc"
+}
+
+variable "admin-role" {
+  type        = string
+  default     = "admin-role"
+  description = "This role is to test to create KV Secret with this jwt secret backend with tfc"
+}
