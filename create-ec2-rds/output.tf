@@ -27,6 +27,11 @@ For example:
    ssh -i ${aws_key_pair.main.key_name}.pem ubuntu@${aws_instance.application.private_ip}
 EOF
 }
+
+# output "private_key" {
+#   value = tls_private_key.main.private_key_pem
+# }
+
 output "private_key" {
-  value = tls_private_key.main.private_key_pem
+  value = nonsensitive(tls_private_key.main.private_key_pem)
 }
