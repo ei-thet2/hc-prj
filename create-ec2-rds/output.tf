@@ -25,7 +25,6 @@ For example:
 APP Client IP (private): ${aws_instance.application.private_ip}
 For example:
    ssh -i ${aws_key_pair.main.key_name}.pem ubuntu@${aws_instance.application.private_ip}
-APP Client IAM Role ARN: ${data.aws_iam_role.vault-client.arn}
 EOF
 }
 output "private_key" {
