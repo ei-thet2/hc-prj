@@ -81,6 +81,8 @@ resource "aws_db_instance" "db" {
   db_subnet_group_name = var.db_subnet
   vpc_security_group_ids = [aws_security_group.security_group_db.id]
   db_name = "prj_db"
+  #add
+  skip_final_snapshot    = true
 }
 
 resource "aws_security_group" "security_group_db" {
