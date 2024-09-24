@@ -10,7 +10,7 @@ variable "az_1a" {
 }
 
 variable "public_subnet_02" {
-  default = "10.10.1.0/24"
+  default = "10.10.2.0/24"
   description = "public-subnet-02"
 }
 
@@ -21,7 +21,7 @@ variable "az_1b" {
 }
 
 variable "public_subnet_03" {
-  default = "10.10.1.0/24"
+  default = "10.10.3.0/24"
   description = "public-subnet-03"
 }
 
