@@ -17,8 +17,7 @@ resource "vault_aws_secret_backend_role" "role" {
 
 resource "time_sleep" "wait_30_seconds" {
   depends_on = [vault_aws_secret_backend_role.role]
-
-  destroy_duration = "30s"
+  #destroy_duration = "30s"
 }
 
 data "vault_aws_access_credentials" "creds" {
