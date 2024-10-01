@@ -17,10 +17,11 @@ resource "vault_aws_secret_backend_role" "role" {
 
 resource "time_sleep" "wait_30_seconds" {
   depends_on = [vault_aws_secret_backend_role.role]
-  destroy_duration = "30s"
+  create_duration = "30s"
 }
 
 data "vault_aws_access_credentials" "creds" {
+  depends_on = [ time_sleep.wait_30_seconds ]
   backend = vault_aws_secret_backend.aws.path
   role    = vault_aws_secret_backend_role.role.name
 }
