@@ -10,3 +10,7 @@ output "vault_namespace" {
 output "vault_version" {
   value =  hcp_vault_cluster.aws_hcp_vault_cluster.vault_version
 }
+
+output "hvn_id" {
+  value =  hcp_vault_cluster.aws_hcp_vault_cluster.hvn_id
+}
